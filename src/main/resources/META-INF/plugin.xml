@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>com.ppismerov.ksvu</id>
+    <name>Kotlin serialVersionUID generator</name>
+    <vendor email="unnamed231best@gmail.com" url="https://github.com/pavel-pismerov/kotlin-serial-version-uid-plugin">Pavel Pismerov</vendor>
+    <idea-version since-build="192.5"/>
+
+    <description>Plugin for IntelliJ Idea for generating serialVersionUID in Kotlin classes</description>
+
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <actions>
+        <group id="KotlinToolsGroup.KotlinSerialVersionUidPlugin" text="GenerateSerialVersionUID">
+            <add-to-group group-id="KotlinToolsGroup" anchor="last"/>
+            <action id="KotlinSerialVersionUidPlugin"
+                    class="com.ppismerov.ksvu.GenerateSerialVersionUidAction"
+                    text="GenerateSerialVersionUID"
+                    description="Generates Kotlin serialVersionUID in current class"
+            >
+                <keyboard-shortcut first-keystroke="control alt G" keymap="$default"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
